@@ -7,10 +7,11 @@ jobs:
   call-terraform:
     uses: "padarbindaorg/platform-modules/.github/workflows/provision.yml@main"
     with:
+      application_name: "sample-platform"
       aws_region: "us-east-2"
       environment: "dev"
-      backend_bucket_name: "sample-platform-bucket"
-      backend_dynamo_table_name: "sample-platform-lock-table"
+      backend_bucket_name: "my-bucket"
+      backend_dynamo_table_name: "my-lock-table"
     secrets:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       aws_access_secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
