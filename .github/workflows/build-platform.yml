@@ -10,7 +10,7 @@ jobs:
       application_name: "sample_platform"
       aws_region: "us-east-2"
       environment: "dev"
-      backend_bucket_name: "my_bucket"
+      backend_bucket_name: "pp-bucket"
       backend_dynamo_table_name: "my_lock_table"
     secrets:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
