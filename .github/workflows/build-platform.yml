@@ -7,7 +7,7 @@ jobs:
   call-terraform:
     uses: "padarbindaorg/platform-modules/.github/workflows/provision.yml@main"
     with:
-      application_name: "sample-platform"
+      application_name: "sample_platform"
       aws_region: "us-east-2"
       environment: "dev"
       backend_bucket_name: "my_bucket"
