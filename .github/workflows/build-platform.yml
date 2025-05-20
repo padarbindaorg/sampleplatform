@@ -1,6 +1,7 @@
 name: "build sample-platform"
 on:
-  push:
+  workflow_dispatch:
+    
 
 jobs:
   call-terraform:
