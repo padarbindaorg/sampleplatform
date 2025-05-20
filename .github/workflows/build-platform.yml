@@ -1,7 +1,15 @@
 name: "build sample-platform"
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   call-terraform:
-    uses:
+    uses: "padarbindaorg/platform-modules/.github/workflows/provision.yml@main"
+    with:
+      aws_region: "us-east-2"
+      environment: "dev"
+      backend_bucket_name: "sample-platform-bucket"
+      backend_dynamo_table_name: "sample-platform-lock-table"
+    secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_access_secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
